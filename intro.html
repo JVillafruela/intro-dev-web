@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="JVA" />
+  <meta name="date" content="2016-12-10" />
+  <title>Intro développement web</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Intro développement web</h1>
+  <p class="author">
+JVA
+  </p>
+  <p class="date">13/10/2016</p>
+</div>
+<div id="exemple-visiter-une-page-web" class="slide section level2">
+<h1>exemple : visiter une page web</h1>
+<ul>
+<li>url : http://jva.lenny/page1.html
+<ul>
+<li>http : protocole</li>
+<li>jva.lenny : hôte (serveur)</li>
+<li>test.html : fichier</li>
+</ul></li>
+<li>Fonctionnement
+<ul>
+<li>navigateur demande la page (http GET /test.html )</li>
+<li>serveur répond : contenu de la page ou erreur (code http 404)</li>
+<li>serveur web : simple, répond à quelques types de requêtes</li>
+<li>échanges en texte clair (http)</li>
+</ul></li>
+</ul>
+<p>Le serveur web peut servir tout type de fichier, le navigateur interprète et affiche ou télécharge (démo ; img, txt, pdf, xls)</p>
+</div>
+<div id="anatomie-dune-page-web" class="slide section level2">
+<h1>Anatomie d’une page web</h1>
+<ul>
+<li>langage html
+<ul>
+<li>normalisé : W3C</li>
+<li>plusieurs normes : html4,xhtml,html5</li>
+<li>balises (idem xml)</li>
+</ul></li>
+<li>quelques tags
+<ul>
+<li>html, head, body, h1, p</li>
+<li>démo : table</li>
+</ul></li>
+<li>c'est laid !
+<ul>
+<li>feuilles de style css</li>
+<li>typo</li>
+<li>positionnement</li>
+</ul></li>
+</ul>
+</div>
+<div id="php" class="slide section level2">
+<h1>php</h1>
+<ul>
+<li>1995 par Rasmus Lerdorf &quot;Personal Home Pages&quot;</li>
+<li>langage de script
+<ul>
+<li>interprété</li>
+<li>pas (peu) de déclarations de $variables</li>
+</ul></li>
+<li>environnement
+<ul>
+<li>web =&gt; retourne html (ou xml, csv )<br />
+</li>
+<li>ligne de commandes (cli)</li>
+</ul></li>
+<li>page php
+<ul>
+<li>extension .php</li>
+<li>peut contenir html : envoyé tel quel</li>
+<li>code php encadré par <?php ?></li>
+</ul></li>
+</ul>
+<p>nav -&gt; serveur web -&gt; php -&gt; serveur web -&gt; navigateur (faire diagramme séquence)</p>
+</div>
+<div id="outils" class="slide section level2">
+<h1>Outils</h1>
+<ul>
+<li>php : windows/mac/linux http://php.net/</li>
+<li>serveur web :
+<ul>
+<li>inutile si on utilise celui de php (mais pb sur liens absolus)</li>
+<li>linux : apache (VM)</li>
+<li>windows : IIS https://www.microsoft.com/WEB/platform/phponwindows.aspx</li>
+</ul></li>
+<li>IDE : Netbeans (php) https://netbeans.org/</li>
+<li>Bdd : mysql (postgresql) http://dev.mysql.com/downloads/mysql/</li>
+<li>Outil mysql :
+<ul>
+<li>modélisation &amp; gestion serveur : MySql Workbench</li>
+<li>équivalent TOAD : http://www.heidisql.com/</li>
+</ul></li>
+<li>Navigateur : Firefox (Chrome) tester sur IE https://www.mozilla.org</li>
+<li>Gestionnaire de version : subversion https://tortoisesvn.net/</li>
+</ul>
+</div>
+<div id="organisation-dev" class="slide section level2">
+<h1>Organisation dev</h1>
+<ul>
+<li>Frontend
+<ul>
+<li>html</li>
+<li>css</li>
+<li>javascript</li>
+</ul></li>
+<li>Backend
+<ul>
+<li>php</li>
+<li>base de données</li>
+</ul></li>
+</ul>
+</div>
+</body>
+</html>

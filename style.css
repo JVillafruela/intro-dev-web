@@ -1,0 +1,29 @@
+	body {
+		background-color: #FFCC66;
+	}
+
+	h1 {
+		color: #990000;
+		background-color: #FC9804;
+		font-family: arial, verdana, sans-serif;
+	}
+	
+	
+		
+	h2 {font-family: "Times New Roman", serif; 
+		font-style: italic;
+		text-decoration: underline;
+	
+	}
+	
+	
+	p {font-family: arial, verdana, sans-serif;}
+		
+	td {font-family: arial, verdana, sans-serif; font-weight: bold;
+	text-align: center;
+	}
+	
+		th {
+		text-align: right;
+	}
+
