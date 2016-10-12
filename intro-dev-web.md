@@ -5,7 +5,7 @@
 
 ## exemple : visiter une page web
 
-- url : http://jva.lenny/page1.html
+- url : <http://jva.lenny/page1.html>
 	- http : protocole
 	- jva.lenny : hôte (serveur)
 	- test.html : fichier
@@ -32,54 +32,116 @@ Le serveur web peut servir tout type de fichier, le navigateur interprète et af
 	- feuilles de style css
 	- typo
 	- positionnement
+	- adaptation à la taille de l'écran (responsive design)
+	- impression
+	- démo : <http://www.w3schools.com/css/demo_default.htm> 
+
 
 ## php 
 
 - 1995 par Rasmus Lerdorf "Personal Home Pages"
+- dans le top 10 des langages les plus populaires <http://www.tiobe.com/tiobe-index/>
 - langage de script 
 	- interprété
-	- pas (peu) de déclarations de $variables
+	- pas de déclarations de $variables 
+	- variables non typées (type hinting dans les params de fonction)
+	- sensible à la casse 
+	- orienté objet (optionnel)
+	- structures de données : tableaux (associatifs) <http://php.net/manual/fr/ref.array.php>
+	- E_NOTICE est votre ami
+	
+- page php
+	- extension .php
+	- peut contenir du html : sera envoyé tel quel
+	- code php encadré par <?php ?>
+
+## Exécution code php
+
 - environnement
 	- web => retourne html (ou xml, csv )	
 	- ligne de commandes (cli)
 
-- page php
-	- extension .php
-	- peut contenir html : envoyé tel quel
-	- code php encadré par <?php ?>
+- traitement d'une requête
+	- navigateur -> serveur web (GET /liste.php)
+	- serveur web transmet la requête au moteur php
+	- php interprète la page et passe le résultat au serveur web
+	- le serveur web envoie le résultat au navigateur 
+	- sans état : comment préserver les variables entre 2 appels ?
 
-nav -> serveur web -> php -> serveur web -> navigateur (faire diagramme séquence)
+- plateforme de production
+	- OS : GNU/Linux (CentOS)
+	- Serveur web : Apache
+	- php : mod_php de Apache
+	- bdd : mysql (Oracle) ou MariaDB (fork, compatible, de mysql)
 
 
+## Démos php
 
-
-
-
-
+- liste depuis la base de données : liste.php 
+	- ça fait peur ?
+	- aller plus loin : modéle MVC
+		- Model : les données (orm)
+		- View : l'affichage (templates)
+		- Controller : contrôleur
+- formulaire de login
 
 
 ## Outils
 - php : windows/mac/linux http://php.net/ 
 - serveur web :
 	- inutile si on utilise celui de php (mais pb sur liens absolus)
-	- linux : apache (VM)
-	- windows : IIS https://www.microsoft.com/WEB/platform/phponwindows.aspx 
-- IDE : Netbeans (php) https://netbeans.org/ 
-- Bdd : mysql (postgresql)  http://dev.mysql.com/downloads/mysql/ 
-- Outil mysql : 
-	- modélisation & gestion serveur : MySql Workbench
-	- équivalent TOAD : http://www.heidisql.com/ 
-- Navigateur : Firefox (Chrome) tester sur IE https://www.mozilla.org
-- Gestionnaire de version : subversion https://tortoisesvn.net/ 
+	- linux : Apache (VM)
+	- windows : IIS <https://www.microsoft.com/WEB/platform/phponwindows.aspx> 
+- IDE : Netbeans (php edition) <https://netbeans.org/> 
+- Bdd : mysql <http://dev.mysql.com/downloads/mysql/> 
+	- édité par Oracle mais c'est pas Oracle !
+	- pour des usages exigeants : [Postgresql](https://www.postgresql.org/)
+- Outils mysql : 
+	- modélisation & gestion serveur : MySql Workbench <https://dev.mysql.com/downloads/workbench/>
+	- équivalent TOAD : <http://www.heidisql.com/> (SQLDeveloper fonctionne aussi)
+- Navigateur : Firefox (Chrome) tester sur IE <https://www.mozilla.org>
+- Gestionnaire de version : [subversion](https://subversion.apache.org/) client : <https://tortoisesvn.net/> 
+- Tous ces outils sont des [logiciels libres](https://fr.wikipedia.org/wiki/Logiciel_libre) et gratuits
 
 ## Organisation dev
+
 - Frontend
+	- graphisme
 	- html
 	- css 
 	- javascript
 - Backend
 	- php
 	- base de données
+	- sécurité
+
+- Travail à plusieurs
+	- dev et base de données sur chaque poste
+	- publication dans le gestionnaire de version
+	- intégration sur VM de test ~ prod
+
+## Gravir la montagne
+
+Utiliser des outils pour ne pas partir de zéro.
+
+- côté php
+	- bibliothèques d'outils : <https://packagist.org/> 
+		- envoyer des mails : [swiftmailer](https://packagist.org/packages/swiftmailer/swiftmailer)
+		- lire/écrire des fichiers Excel : [PHPExcel](https://github.com/PHPOffice/PHPExcel) 
+	- [frameworks](https://fr.wikipedia.org/wiki/Framework)
+		- Symfony le cadriciel made in France : <http://symfony.com/>
+		- Doctrine : accés aux données (ORM) : <http://www.doctrine-project.org/>
+		- Twig : moteur de templates <http://twig.sensiolabs.org/>
+		- Silex : micro framework basé sur des composants symfony
+- côté frontend
+	- html/css
+		- bootstrap <http://getbootstrap.com/>
+		- <https://html5up.net/>
+	- javascript
+		- JQuery <https://jquery.com/>
+		
+
+		
 
 
 

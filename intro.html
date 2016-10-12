@@ -26,7 +26,7 @@ JVA
 <div id="exemple-visiter-une-page-web" class="slide section level2">
 <h1>exemple : visiter une page web</h1>
 <ul>
-<li>url : http://jva.lenny/page1.html
+<li>url : <a href="http://jva.lenny/page1.html" class="uri">http://jva.lenny/page1.html</a>
 <ul>
 <li>http : protocole</li>
 <li>jva.lenny : hôte (serveur)</li>
@@ -61,6 +61,9 @@ JVA
 <li>feuilles de style css</li>
 <li>typo</li>
 <li>positionnement</li>
+<li>adaptation à la taille de l'écran (responsive design)</li>
+<li>impression</li>
+<li>démo : <a href="http://www.w3schools.com/css/demo_default.htm" class="uri">http://www.w3schools.com/css/demo_default.htm</a></li>
 </ul></li>
 </ul>
 </div>
@@ -68,25 +71,66 @@ JVA
 <h1>php</h1>
 <ul>
 <li>1995 par Rasmus Lerdorf &quot;Personal Home Pages&quot;</li>
+<li>dans le top 10 des langages les plus populaires <a href="http://www.tiobe.com/tiobe-index/" class="uri">http://www.tiobe.com/tiobe-index/</a></li>
 <li>langage de script
 <ul>
 <li>interprété</li>
-<li>pas (peu) de déclarations de $variables</li>
+<li>pas de déclarations de $variables</li>
+<li>variables non typées (type hinting dans les params de fonction)</li>
+<li>sensible à la casse</li>
+<li>orienté objet (optionnel)</li>
+<li>structures de données : tableaux (associatifs) <a href="http://php.net/manual/fr/ref.array.php" class="uri">http://php.net/manual/fr/ref.array.php</a></li>
+<li>E_NOTICE est votre ami</li>
 </ul></li>
+<li>page php
+<ul>
+<li>extension .php</li>
+<li>peut contenir du html : sera envoyé tel quel</li>
+<li>code php encadré par <?php ?></li>
+</ul></li>
+</ul>
+</div>
+<div id="exécution-code-php" class="slide section level2">
+<h1>Exécution code php</h1>
+<ul>
 <li>environnement
 <ul>
 <li>web =&gt; retourne html (ou xml, csv )<br />
 </li>
 <li>ligne de commandes (cli)</li>
 </ul></li>
-<li>page php
+<li>traitement d'une requête
 <ul>
-<li>extension .php</li>
-<li>peut contenir html : envoyé tel quel</li>
-<li>code php encadré par <?php ?></li>
+<li>navigateur -&gt; serveur web (GET /liste.php)</li>
+<li>serveur web transmet la requête au moteur php</li>
+<li>php interprète la page et passe le résultat au serveur web</li>
+<li>le serveur web envoie le résultat au navigateur</li>
+<li>sans état : comment préserver les variables entre 2 appels ?</li>
+</ul></li>
+<li>plateforme de production
+<ul>
+<li>OS : GNU/Linux (CentOS)</li>
+<li>Serveur web : Apache</li>
+<li>php : mod_php de Apache</li>
+<li>bdd : mysql (Oracle) ou MariaDB (fork, compatible, de mysql)</li>
 </ul></li>
 </ul>
-<p>nav -&gt; serveur web -&gt; php -&gt; serveur web -&gt; navigateur (faire diagramme séquence)</p>
+</div>
+<div id="démos-php" class="slide section level2">
+<h1>Démos php</h1>
+<ul>
+<li>liste depuis la base de données : liste.php
+<ul>
+<li>ça fait peur ?</li>
+<li>aller plus loin : modéle MVC
+<ul>
+<li>Model : les données (orm)</li>
+<li>View : l'affichage (templates)</li>
+<li>Controller : contrôleur</li>
+</ul></li>
+</ul></li>
+<li>formulaire de login</li>
+</ul>
 </div>
 <div id="outils" class="slide section level2">
 <h1>Outils</h1>
@@ -95,18 +139,23 @@ JVA
 <li>serveur web :
 <ul>
 <li>inutile si on utilise celui de php (mais pb sur liens absolus)</li>
-<li>linux : apache (VM)</li>
-<li>windows : IIS https://www.microsoft.com/WEB/platform/phponwindows.aspx</li>
+<li>linux : Apache (VM)</li>
+<li>windows : IIS <a href="https://www.microsoft.com/WEB/platform/phponwindows.aspx" class="uri">https://www.microsoft.com/WEB/platform/phponwindows.aspx</a></li>
 </ul></li>
-<li>IDE : Netbeans (php) https://netbeans.org/</li>
-<li>Bdd : mysql (postgresql) http://dev.mysql.com/downloads/mysql/</li>
-<li>Outil mysql :
+<li>IDE : Netbeans (php edition) <a href="https://netbeans.org/" class="uri">https://netbeans.org/</a></li>
+<li>Bdd : mysql <a href="http://dev.mysql.com/downloads/mysql/" class="uri">http://dev.mysql.com/downloads/mysql/</a>
 <ul>
-<li>modélisation &amp; gestion serveur : MySql Workbench</li>
-<li>équivalent TOAD : http://www.heidisql.com/</li>
+<li>édité par Oracle mais c'est pas Oracle !</li>
+<li>pour des usages exigeants : <a href="https://www.postgresql.org/">Postgresql</a></li>
 </ul></li>
-<li>Navigateur : Firefox (Chrome) tester sur IE https://www.mozilla.org</li>
-<li>Gestionnaire de version : subversion https://tortoisesvn.net/</li>
+<li>Outils mysql :
+<ul>
+<li>modélisation &amp; gestion serveur : MySql Workbench <a href="https://dev.mysql.com/downloads/workbench/" class="uri">https://dev.mysql.com/downloads/workbench/</a></li>
+<li>équivalent TOAD : <a href="http://www.heidisql.com/" class="uri">http://www.heidisql.com/</a> (SQLDeveloper fonctionne aussi)</li>
+</ul></li>
+<li>Navigateur : Firefox (Chrome) tester sur IE <a href="https://www.mozilla.org" class="uri">https://www.mozilla.org</a></li>
+<li>Gestionnaire de version : <a href="https://subversion.apache.org/">subversion</a> client : <a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a></li>
+<li>Tous ces outils sont des <a href="https://fr.wikipedia.org/wiki/Logiciel_libre">logiciels libres</a> et gratuits</li>
 </ul>
 </div>
 <div id="organisation-dev" class="slide section level2">
@@ -114,6 +163,7 @@ JVA
 <ul>
 <li>Frontend
 <ul>
+<li>graphisme</li>
 <li>html</li>
 <li>css</li>
 <li>javascript</li>
@@ -122,6 +172,46 @@ JVA
 <ul>
 <li>php</li>
 <li>base de données</li>
+<li>sécurité</li>
+</ul></li>
+<li>Travail à plusieurs
+<ul>
+<li>dev et base de données sur chaque poste</li>
+<li>publication dans le gestionnaire de version</li>
+<li>intégration sur VM de test ~ prod</li>
+</ul></li>
+</ul>
+</div>
+<div id="gravir-la-montagne" class="slide section level2">
+<h1>Gravir la montagne</h1>
+<p>Utiliser des outils pour ne pas partir de zéro.</p>
+<ul>
+<li>côté php
+<ul>
+<li>bibliothèques d'outils : <a href="https://packagist.org/" class="uri">https://packagist.org/</a>
+<ul>
+<li>envoyer des mails : <a href="https://packagist.org/packages/swiftmailer/swiftmailer">swiftmailer</a></li>
+<li>lire/écrire des fichiers Excel : <a href="https://github.com/PHPOffice/PHPExcel">PHPExcel</a></li>
+</ul></li>
+<li><a href="https://fr.wikipedia.org/wiki/Framework">frameworks</a>
+<ul>
+<li>Symfony le cadriciel made in France : <a href="http://symfony.com/" class="uri">http://symfony.com/</a></li>
+<li>Doctrine : accés aux données (ORM) : <a href="http://www.doctrine-project.org/" class="uri">http://www.doctrine-project.org/</a></li>
+<li>Twig : moteur de templates <a href="http://twig.sensiolabs.org/" class="uri">http://twig.sensiolabs.org/</a></li>
+<li>Silex : micro framework basé sur des composants symfony</li>
+</ul></li>
+</ul></li>
+<li>côté frontend
+<ul>
+<li>html/css
+<ul>
+<li>bootstrap <a href="http://getbootstrap.com/" class="uri">http://getbootstrap.com/</a></li>
+<li><a href="https://html5up.net/" class="uri">https://html5up.net/</a></li>
+</ul></li>
+<li>javascript
+<ul>
+<li>JQuery <a href="https://jquery.com/" class="uri">https://jquery.com/</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
