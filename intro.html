@@ -29,7 +29,12 @@ JVA
 <li>url : <a href="http://jva.lenny/page1.html" class="uri">http://jva.lenny/page1.html</a>
 <ul>
 <li>http : protocole</li>
-<li>jva.lenny : hôte (serveur)</li>
+<li>jva.lenny : hôte (serveur)
+<ul>
+<li>annuaire DNS donne ip</li>
+<li>sur le serveur on peut avoir plusieurs sites</li>
+</ul></li>
+<li>port : pour http 80 par défaut <a href="http://jva.lenny:80/page1.html" class="uri">http://jva.lenny:80/page1.html</a></li>
 <li>test.html : fichier</li>
 </ul></li>
 <li>Fonctionnement
@@ -54,7 +59,7 @@ JVA
 <li>quelques tags
 <ul>
 <li>html, head, body, h1, p</li>
-<li>démo : table</li>
+<li>démo : image,table</li>
 </ul></li>
 <li>c'est laid !
 <ul>
@@ -86,7 +91,7 @@ JVA
 <ul>
 <li>extension .php</li>
 <li>peut contenir du html : sera envoyé tel quel</li>
-<li>code php encadré par <?php ?></li>
+<li>code php encadré par &lt;?php ?&gt;</li>
 </ul></li>
 </ul>
 </div>
@@ -138,7 +143,7 @@ JVA
 <li>php : windows/mac/linux http://php.net/</li>
 <li>serveur web :
 <ul>
-<li>inutile si on utilise celui de php (mais pb sur liens absolus)</li>
+<li>inutile si on utilise celui de php (en dev : php -S localhost:80 pb si on peut pas utiliser port 80)</li>
 <li>linux : Apache (VM)</li>
 <li>windows : IIS <a href="https://www.microsoft.com/WEB/platform/phponwindows.aspx" class="uri">https://www.microsoft.com/WEB/platform/phponwindows.aspx</a></li>
 </ul></li>
@@ -146,7 +151,7 @@ JVA
 <li>Bdd : mysql <a href="http://dev.mysql.com/downloads/mysql/" class="uri">http://dev.mysql.com/downloads/mysql/</a>
 <ul>
 <li>édité par Oracle mais c'est pas Oracle !</li>
-<li>pour des usages exigeants : <a href="https://www.postgresql.org/">Postgresql</a></li>
+<li>pour des usages exigeants : <a href="https://www.postgresql.org/">Postgresql</a> (licence permissive)</li>
 </ul></li>
 <li>Outils mysql :
 <ul>

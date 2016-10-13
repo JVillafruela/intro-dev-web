@@ -8,6 +8,9 @@
 - url : <http://jva.lenny/page1.html>
 	- http : protocole
 	- jva.lenny : hôte (serveur)
+		- annuaire DNS donne ip 
+		- sur le serveur on peut avoir plusieurs sites
+	- port : pour http 80 par défaut <http://jva.lenny:80/page1.html>
 	- test.html : fichier
 
 - Fonctionnement
@@ -27,7 +30,7 @@ Le serveur web peut servir tout type de fichier, le navigateur interprète et af
 	- balises (idem xml)
 - quelques tags 
 	- html, head, body, h1, p 
-	- démo : table
+	- démo : image,table
 - c'est laid !
 	- feuilles de style css
 	- typo
@@ -53,7 +56,7 @@ Le serveur web peut servir tout type de fichier, le navigateur interprète et af
 - page php
 	- extension .php
 	- peut contenir du html : sera envoyé tel quel
-	- code php encadré par <?php ?>
+	- code php encadré par &lt;?php  ?&gt;
 
 ## Exécution code php
 
@@ -89,13 +92,13 @@ Le serveur web peut servir tout type de fichier, le navigateur interprète et af
 ## Outils
 - php : windows/mac/linux http://php.net/ 
 - serveur web :
-	- inutile si on utilise celui de php (mais pb sur liens absolus)
+	- inutile si on utilise celui de php (en dev : php -S localhost:80 pb si on peut pas utiliser port 80)
 	- linux : Apache (VM)
 	- windows : IIS <https://www.microsoft.com/WEB/platform/phponwindows.aspx> 
 - IDE : Netbeans (php edition) <https://netbeans.org/> 
 - Bdd : mysql <http://dev.mysql.com/downloads/mysql/> 
 	- édité par Oracle mais c'est pas Oracle !
-	- pour des usages exigeants : [Postgresql](https://www.postgresql.org/)
+	- pour des usages exigeants : [Postgresql](https://www.postgresql.org/) (licence permissive)
 - Outils mysql : 
 	- modélisation & gestion serveur : MySql Workbench <https://dev.mysql.com/downloads/workbench/>
 	- équivalent TOAD : <http://www.heidisql.com/> (SQLDeveloper fonctionne aussi)

@@ -38,7 +38,7 @@ foreach ($lignes as $ligne) {
     $ref=$ligne['reference'];
     $libelle=$ligne['libelle'];
     $id=$ligne['id_article'];
-    echo "<tr> <td><a href='article.php?id=$id'>$ref</a></td> <td>$libelle</td>  </tr>";
+    echo "<tr> <td><a href='article-maj.php?id=$id'>$ref</a></td> <td>$libelle</td>  </tr>";
 }
 ?>
         </table>
